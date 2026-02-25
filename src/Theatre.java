@@ -7,11 +7,11 @@ public class Theatre {
         Actor actorTwo = new Actor("Ирина", "Апексимова", Gender.FEMALE, 171);
         Actor actorThree = new Actor("Дмитрий", "Высоцкий", Gender.MALE, 180);
         Director directorOne = new Director("Юрий", "Муравицкий",
-                Gender.MALE, 170, 7);
+                Gender.MALE, 7);
         Director directorTwo = new Director("Максим", "Диденко",
-                Gender.MALE, 175, 1);
-        Person musicAuthor = new Person("Иван", "Кушнир", Gender.MALE, 175);
-        Person choreographer = new Person("Ксения", "Тер-Григорян", Gender.FEMALE, 168);
+                Gender.MALE, 1);
+        Person musicAuthor = new Person("Иван", "Кушнир", Gender.MALE);
+        Person choreographer = new Person("Ксения", "Тер-Григорян", Gender.FEMALE);
 
         //создаем спектакли
         ArrayList<Actor> listOfActorsShow = new ArrayList<>();
@@ -72,5 +72,7 @@ public class Theatre {
         ballet.printlibrettoText(ballet.librettoText);
         System.out.println("-".repeat(20)); //разделительная строка для удобства прочтения
 
+        //напечатаем информацию о каком-то режиссере
+        directorOne.printDirector();
     }
 }
